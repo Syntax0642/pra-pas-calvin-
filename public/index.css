@@ -58,7 +58,7 @@ header{
     font-size: 18.5px;
 }
 
-button {
+#button {
     height: 40px;
     position: relative;
     display: flex;
@@ -72,7 +72,7 @@ button {
     border: none;
 }
 
-button:after {
+#button:after {
     content: " ";
     width: 0%;
     height: 100%;
@@ -82,13 +82,13 @@ button:after {
     right: 0;
 }
 
-button:hover::after {
+#button:hover::after {
     right: auto;
     left: 0;
     width: 100%;
 }
 
-button span {
+#button span {
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -269,4 +269,69 @@ h2{
     width: 250px;
     display: inline-block;
     font-weight: bold;
+}
+
+.form{
+    display: inline;
+}
+
+.delete{
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+.delete i{
+    margin: 5px;
+    padding: 2px;
+}
+
+.details{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: blue;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+.details i{
+    margin: 5px;
+    padding: 2px;
+}
+
+.edit i{
+    margin: 5px;
+    padding: 2px;
+}
+
+.edit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fbff2e;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+    height: 200px;
 }

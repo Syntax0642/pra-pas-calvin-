@@ -26,6 +26,20 @@ class HotelController extends Controller
             "title" => "DetailHotel",
             "hotels" => $hotelsmodels,
         ]);
-    }}
+    }
 
 
+
+
+public function destroy($hotels)
+{
+    try {
+        $hotelsmodels = Hotel::findOrFail($hotels);
+        $hotelsmodels->delete();
+        return redirect()->route('orders.index')->with('success', 'Barang berhasil dihapus!');
+    } catch (\Exception $e) {
+        return redirect()->route('orders.index')->with('error', 'Gagal menghapus barang. Silakan coba lagi.');
+    }
+}
+
+}

@@ -26,11 +26,12 @@ Route::get('/home', function () {
     ]);
 });
 
-Route::get('/orders/all',[HotelController::class,'index']);
+Route::get('/orders/all',[HotelController::class,'index'])->name('orders.index');
 
-Route::get('/planes/all',[PlaneController::class,'indexs']);
+Route::get('/planes/all',[PlaneController::class,'indexs'])->name('planes.indexs');
 
 Route::get('/orders/detail/{hotels}', [HotelController::class, 'show'])->name('hotels.show');
 
 Route::get('/planes/detail/{planes}', [PlaneController::class, 'shows'])->name('planes.show');
 
+Route::delete('/orders/hotelsdestroy/{hotels}', [HotelController::class, 'destroy'])->name('hotels.destroy');
