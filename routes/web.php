@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\PlaneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,9 @@ Route::get('/home', function () {
 
 Route::get('/orders/all',[HotelController::class,'index']);
 
-Route::get('/order/detail/{id}',[HotelController::class,'show'] );
+Route::get('/planes/all',[PlaneController::class,'indexs']);
 
+Route::get('/orders/detail/{hotels}', [HotelController::class, 'show'])->name('hotels.show');
+
+Route::get('/planes/detail/{planes}', [PlaneController::class, 'shows'])->name('planes.show');
 

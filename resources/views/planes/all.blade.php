@@ -17,27 +17,31 @@
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Preview</th>
-            <th scope="col">Nama Hotel</th>
-            <th scope="col">Tipe Kamar</th>
-            <th scope="col">Kapasitas</th>
+            <th scope="col">Nama Pesawat</th>
+            <th scope="col">Nama Pilot</th>
+            <th scope="col">Nomor Penerbangan</th>
             <th scope="col">Harga</th>
+            <th scope="col">Jam Berangkat</th>
+            <th scope="col">Tanggal Berangkat</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
         @php $no = 1 @endphp
-        @foreach ($hotels as $data)
+        @foreach ($planes as $data)
             <tr>
                 <th scope="row">{{$no++}}</th>
                 <td><img class="img-tabel" src="../images/{{$data->preview}}" alt=""></td>
-                <td><h3>{{$data->nama_hotel}}</h3></td>
-                <td><h3>{{$data->tipe_kamar}}</h3></td>
-                <td><h3>{{$data->kapasitas}}</h3></td>
+                <td><h3>{{$data->nama_pesawat}}</h3></td>
+                <td><h3>{{$data->nama_pilot}}</h3></td>
+                <td><h3>{{$data->nomor_penerbangan}}</h3></td>
                 <td><h3>{{$data->harga}}</h3></td>
+                <td><h3>{{$data->jam_berangkat}}</h3></td>
+                <td><h3>{{$data->tanggal_berangkat}}</h3></td>
                 <td>
                     <div class="icon-container">
                         <div>
-                            <a href="/orders/detail/{{$data->id}}" style="color: blue;"><i class="fas fa-info-circle action-icons"></i></a>
+                            <a href="/planes/detail/{{$data->id}}" style="color: blue;"><i class="fas fa-info-circle action-icons"></i></a>
                         </div>
                         <div class="icon-label">
                         </div>

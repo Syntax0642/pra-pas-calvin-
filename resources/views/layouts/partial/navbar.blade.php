@@ -9,7 +9,12 @@
     </nav>
     <a href="/orders/all">
         <button id="button">
-            <span>ORDER</span>
+            <span>HOTEL</span>
+        </button>
+    </a>
+    <a href="/planes/all">
+        <button id="button">
+            <span>PLANE</span>
         </button>
     </a>
 </header>

@@ -14,11 +14,18 @@ class HotelController extends Controller
         ]);
    }
 
-    public function show($id)
+    public function show($hotels)
     {
-        $hotels = Hotel::findOrFail($id);  // Assuming your model is named Hotel
-        return view('showHotel', compact('hotels'));
-    }
-}
+        $hotelsmodels = Hotel::find($hotels);
+
+        if (!$hotelsmodels) {
+            return abort(404);
+        }
+
+        return view('orders.detail', [
+            "title" => "DetailHotel",
+            "hotels" => $hotelsmodels,
+        ]);
+    }}
 
 
