@@ -37,16 +37,16 @@
                 <td>
                     <div class="actions">
                             <div>
-                                <a href="/orders/detail/{{$data->id}}"> <button type="submit" class="details"><i style="color: white" class="fas fa-info-circle action-icons"></i>Details</button></a>
+                                <a href="/planes/detail/{{$data->id}}"> <button type="submit" class="details"><i style="color: white" class="fas fa-info-circle action-icons"></i>Details</button></a>
                             </div>
-                                <form class="delete" action="{{ route('hotels.destroy', $data->id) }}" method="post" >
+                                <form class="delete" action="{{ route('planes.destroy', $data->id) }}" method="post" >
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="delete" onclick="return confirm('Apakah Anda yakin ingin menghapus item ini?')"><i style="color: white" class="fas fa-trash-alt action-icons"></i>Delete</button>
                                     </button>
                                 </form>
                         <div>
-                            <a href="/orders/detail/{{$data->id}}"> <button type="submit" class="edit"><i style="color: white" class="fas fa-edit action-icons"></i>Edit</button></a>
+                            <a href="/planes/detail/{{$data->id}}"> <button type="submit" class="edit"><i style="color: white" class="fas fa-edit action-icons"></i>Edit</button></a>
                         </div>
                     </div>
                 </td>

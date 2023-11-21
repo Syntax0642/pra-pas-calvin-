@@ -24,6 +24,13 @@
             <li class="list-group-item"><strong>Jam Berangkat:</strong> {{ $planes->jam_berangkat }}</li>
             <li class="list-group-item"><strong>Tanggal Berangkat:</strong> {{ $planes->tanggal_berangkat }}</li>
         </ul>
+        <div class="bback">
+            <a href="/planes/all">
+                <button id="button">
+                    <span>Back</span>
+                </button>
+            </a>
+        </div>
     </div>
 </div>
 </body>

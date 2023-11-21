@@ -39,27 +39,18 @@
                 <td><h3>{{$data->jam_berangkat}}</h3></td>
                 <td><h3>{{$data->tanggal_berangkat}}</h3></td>
                 <td>
-                    <div class="icon-container">
+                    <div class="actions">
                         <div>
-                            <a href="/planes/detail/{{$data->id}}" style="color: blue;"><i class="fas fa-info-circle action-icons"></i></a>
+                            <a href="/planes/detail/{{$data->id}}"> <button type="submit" class="details"><i style="color: white" class="fas fa-info-circle action-icons"></i>Details</button></a>
                         </div>
-                        <div class="icon-label">
-                        </div>
-                    </div>
-                    <div class="icon-container">
+                        <form class="delete" action="{{ route('planes.destroy', $data->id) }}" method="post" >
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="delete" onclick="return confirm('Apakah Anda yakin ingin menghapus item ini?')"><i style="color: white" class="fas fa-trash-alt action-icons"></i>Delete</button>
+                            </button>
+                        </form>
                         <div>
-                            <a href="#" data-toggle="modal" data-target="#studentDetailModal-{{$data->id}}" style="color: red;">
-                                <i class="fas fa-trash-alt action-icons"></i>
-                            </a>
-                        </div>
-                        <div class="icon-label">
-                        </div>
-                    </div>
-                    <div class="icon-container">
-                        <div>
-                            <a href="#" style="color: yellow;"><i class="fas fa-edit action-icons"></i></a>
-                        </div>
-                        <div class="icon-label">
+                            <a href="/planes/detail/{{$data->id}}"> <button type="submit" class="edit"><i style="color: white" class="fas fa-edit action-icons"></i>Edit</button></a>
                         </div>
                     </div>
                 </td>

@@ -23,6 +23,13 @@
             <li class="list-group-item"><strong>Booking Deadline:</strong> {{ $hotels->booking_deadline }}</li>
             <li class="list-group-item"><strong>Update Terakhir:</strong> {{ $hotels->update_terakhir }}</li>
         </ul>
+        <div class="bback">
+            <a href="/orders/all">
+                <button id="button">
+                    <span>Back</span>
+                </button>
+            </a>
+        </div>
     </div>
 </div>
 </body>

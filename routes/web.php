@@ -41,6 +41,8 @@ Route::get('/tickets/detail/{tickets}', [TicketController::class, 'showss'])->na
 
 Route::delete('/orders/hotelsdestroy/{hotels}', [HotelController::class, 'destroy'])->name('hotels.destroy');
 
+Route::delete('/planes/planesdestroy/{planes}', [PlaneController::class, 'destroyss'])->name('planes.destroy');
+
 Route::delete('/tickets/ticketsdestroy/{tickets}', [TicketController::class, 'destroys'])->name('tickets.destroy');
 
 
