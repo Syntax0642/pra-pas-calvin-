@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Hotel;
 
@@ -9,7 +8,7 @@ class HotelController extends Controller
 {
    public function index(){
         return view('orders/all',[
-            'title' => 'orders',
+            'title' => 'Hotels',
             'hotels' => Hotel::all()
         ]);
    }
@@ -43,3 +42,14 @@ public function destroy($hotels)
 }
 
 }
+
+//
+//    public function edit($id)
+//    {
+//        $barang = Barang::findOrFail($id);
+//        return view('barang.barangedit', [
+//            "title" => "Edit Barang",
+//            "barang" => $barang,
+//        ]);
+//    }
+//

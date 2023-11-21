@@ -17,4 +17,9 @@
             <span>PLANE</span>
         </button>
     </a>
+    <a href="/tickets/all">
+        <button id="button">
+            <span>TICKET</span>
+        </button>
+    </a>
 </header>
