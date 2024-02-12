@@ -23,7 +23,7 @@
             <li class="list-group-item"><strong>Tipe Pesanan:</strong> {{ $tickets->tipe_pesanan }}</li>
             <li class="list-group-item"><strong>Nama Kendaraan:</strong> {{ $tickets->nama_kendaraan }}</li>
             <li class="list-group-item"><strong>Kode Pesanan:</strong> {{ $tickets->kode_pesanan }}</li>
-            <li class="list-group-item"><strong>Kuota Tiket:</strong> {{ $tickets->tiket_orang }}</li>
+            <li class="list-group-item"><strong>Kuota Tiket:</strong> {{ $tickets->Ticketss->tiketperorang}}</li>
             <li class="list-group-item"><strong>Harga:</strong> {{ $tickets->harga }}</li>
             <li class="list-group-item"><strong>Jam Berangkat:</strong> {{ $tickets->jam_berangkat }}</li>
             <li class="list-group-item"><strong>Tanggal Pemesanan:</strong> {{ $tickets->tanggal_pemesanan }}</li>

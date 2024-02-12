@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('tipe_pesanan', 70);
             $table->string('nama_kendaraan', 70);
             $table->integer('kode_pesanan');
-            $table->integer('tiket_orang');
+            $table->foreignId('tiket_orang');
             $table->string('harga',100);
             $table->string('jam_berangkat',100);
             $table->date('tanggal_pemesanan');
